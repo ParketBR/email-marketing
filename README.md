@@ -27,14 +27,13 @@ coluna única o e-mail dobraria de altura, e rolagem derruba taxa de clique.
 ## Antes de disparar
 
 - [ ] Conferir o depoimento no perfil do Google, palavra por palavra
-- [ ] Hospedar `imagens/` e trocar os `src` (comando abaixo)
+- [x] ~~Hospedar `imagens/` e trocar os `src`~~ — servidas pelo Pages deste repo
 - [ ] Trocar `*|UNSUB|*` pela tag de descadastro da ferramenta
 - [ ] Confirmar o WhatsApp comercial da campanha
 - [ ] Teste de entrega em um Gmail, um Outlook e um iPhone
 
-```bash
-sed -i '' 's|src="imagens/|src="https://SEU-DOMINIO/email/|g' parket-orcamento.html
-```
+As imagens são servidas por <https://parketbr.github.io/email-marketing/imagens/>,
+então o HTML já pode ser colado direto na ferramenta de disparo.
 
 ## Trocar uma foto
 
