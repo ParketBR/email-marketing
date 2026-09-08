@@ -1,0 +1,404 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="x-apple-disable-message-reformatting" />
+<meta name="color-scheme" content="dark" />
+<meta name="supported-color-schemes" content="dark" />
+<title>Parket — a madeira do seu projeto, do piso ao forro</title>
+
+<!--
+  ══════════════════════════════════════════════════════════════════════
+  PARKET · Disparo público final — objetivo: gerar orçamento
+  ══════════════════════════════════════════════════════════════════════
+
+  ANTES DE DISPARAR, TROQUE OS CAMINHOS DE IMAGEM.
+  As tags <img> apontam para "imagens/..." (relativo) só para você abrir
+  no navegador e conferir. E-mail não carrega imagem local — todas
+  precisam de URL pública (https://).
+
+  Suba a pasta /imagens para o seu servidor ou para a biblioteca de
+  mídia da ferramenta de disparo e rode, na pasta do projeto:
+
+      sed -i '' 's|src="imagens/|src="https://SEU-DOMINIO/email/|g' parket-orcamento.html
+
+  ── Estrutura ─────────────────────────────────────────────────────────
+  600px, tabelas aninhadas, CSS inline. Testado como padrão universal
+  (Gmail, Outlook desktop/web, Apple Mail, Yahoo, Mailchimp, RD, Brevo).
+  Sem WebP, sem SVG, sem web font obrigatória — DM Sans só é aplicada
+  onde o cliente de e-mail suporta @import (Apple Mail, iOS); nos demais
+  cai para Helvetica/Arial, que é o fallback do próprio design system.
+
+  ── Cores (tokens.css do site) ────────────────────────────────────────
+  --ground #0D0D0D · --ground-2 #171614 · --on-dark #E8E4DF
+  --on-dark-muted #9A948C · --wood-quente #A4774D · --paper #F5F2EC
+  ══════════════════════════════════════════════════════════════════════
+-->
+
+<style type="text/css">
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@200;300;400;500&display=swap');
+
+  /* Resets de cliente */
+  body, table, td, a { -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; }
+  table, td { mso-table-lspace:0pt; mso-table-rspace:0pt; }
+  img { -ms-interpolation-mode:bicubic; border:0; height:auto; line-height:100%; outline:none; text-decoration:none; display:block; }
+  table { border-collapse:collapse !important; }
+  body { height:100% !important; margin:0 !important; padding:0 !important; width:100% !important; }
+
+  /* Gmail/Apple: não transformar telefone e endereço em link azul */
+  a[x-apple-data-detectors], .unstyle-auto-detected-links a, .aBn {
+    color:inherit !important; text-decoration:none !important; font-size:inherit !important;
+    font-family:inherit !important; font-weight:inherit !important; line-height:inherit !important;
+    border-bottom:0 !important;
+  }
+
+  /* Mobile */
+  @media screen and (max-width:600px) {
+    .wrap        { width:100% !important; }
+    .pad         { padding-left:24px !important; padding-right:24px !important; }
+    /* A grade NÃO empilha em coluna única de propósito: em 375px as duas
+       colunas dão ~158px de imagem, que é legível, e o e-mail fica bem mais
+       curto — rolagem é o principal inimigo da taxa de clique. O que muda no
+       mobile é só a folga entre colunas. */
+    .stack-img   { width:100% !important; height:auto !important; }
+    .gap         { width:10px !important; font-size:10px !important; line-height:10px !important; }
+    .h1          { font-size:30px !important; line-height:36px !important; }
+    .h2          { font-size:21px !important; line-height:28px !important; }
+    .num         { font-size:34px !important; line-height:38px !important; }
+    .btn a       { display:block !important; }
+    .hide-mob    { display:none !important; }
+  }
+</style>
+<!--[if mso]>
+<style type="text/css">
+  body, table, td, a, p, h1, h2, span { font-family: Helvetica, Arial, sans-serif !important; }
+</style>
+<![endif]-->
+</head>
+
+<body style="margin:0; padding:0; width:100%; background-color:#0D0D0D;">
+
+<!-- Preheader: o texto de prévia na caixa de entrada. Máx ~90 caracteres. -->
+<div style="display:none; font-size:1px; color:#0D0D0D; line-height:1px; max-height:0; max-width:0; opacity:0; overflow:hidden; mso-hide:all;">
+  Piso, deck, forro, painel, porta e escada com um só fornecedor. Orçamento sem compromisso.
+  &#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;&#847;&zwnj;&nbsp;
+</div>
+
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color:#0D0D0D;">
+<tr>
+<td align="center" style="padding:0;">
+
+  <!--[if mso]><table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600"><tr><td><![endif]-->
+  <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" class="wrap" style="width:600px; max-width:600px; background-color:#0D0D0D;">
+
+
+  <!-- ══════════ CABEÇALHO ══════════ -->
+  <tr>
+    <td class="pad" align="center" style="padding:34px 40px 30px 40px;">
+      <a href="https://parket.com.br?utm_source=email&amp;utm_medium=disparo&amp;utm_campaign=orcamento&amp;utm_content=logo" style="text-decoration:none;">
+        <img src="imagens/logo-parket-branco.png" width="132" alt="Parket" style="display:block; width:132px; max-width:132px; height:auto; border:0;" />
+      </a>
+      <div style="height:14px; line-height:14px; font-size:14px;">&nbsp;</div>
+      <p style="margin:0; font-family:'DM Sans', Helvetica, Arial, sans-serif; font-size:11px; line-height:16px; font-weight:400; letter-spacing:2.4px; text-transform:uppercase; color:#9A948C;">
+        Desde 1974
+      </p>
+    </td>
+  </tr>
+
+
+  <!-- ══════════ HERO ══════════ -->
+  <tr>
+    <td style="padding:0; font-size:0; line-height:0;">
+      <img src="imagens/hero-suite.jpg" width="600" height="400" alt="Suíte revestida em madeira — piso, forro e painéis executados pela Parket" style="display:block; width:100%; max-width:600px; height:auto; border:0;" />
+    </td>
+  </tr>
+
+  <tr>
+    <td class="pad" style="padding:38px 40px 0 40px;">
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+          <td style="padding:0 0 20px 0;">
+            <!-- filete de acento -->
+            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="34" style="width:34px;">
+              <tr><td height="2" bgcolor="#A4774D" style="height:2px; line-height:2px; font-size:2px; background-color:#A4774D;">&nbsp;</td></tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h1 class="h1" style="margin:0; font-family:'DM Sans', Helvetica, Arial, sans-serif; font-size:38px; line-height:45px; font-weight:300; letter-spacing:-0.6px; color:#E8E4DF;">
+              A madeira da sua casa<br />não deveria vir de<br />quatro fornecedores.
+            </h1>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:22px 0 0 0;">
+            <p style="margin:0; font-family:'DM Sans', Helvetica, Arial, sans-serif; font-size:17px; line-height:28px; font-weight:300; color:#B8B2AA;">
+              Piso, deck, forro, painel, porta e escada saem da mesma floresta, da mesma
+              serraria e da mesma equipe de instalação. É por isso que os encontros fecham,
+              o tom bate de um ambiente para o outro e ninguém joga a culpa em ninguém
+              quando algo precisa de ajuste.
+            </p>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+
+  <!-- ══════════ CTA PRINCIPAL ══════════ -->
+  <tr>
+    <td class="pad" style="padding:30px 40px 42px 40px;">
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="btn">
+        <tr>
+          <td align="center" bgcolor="#A4774D" style="background-color:#A4774D; border-radius:2px;">
+            <a href="https://wa.me/5511999600222?text=Ol%C3%A1%21%20Vim%20pelo%20e-mail%20e%20gostaria%20de%20um%20or%C3%A7amento."
+               style="display:inline-block; padding:16px 34px; font-family:'DM Sans', Helvetica, Arial, sans-serif; font-size:14px; line-height:18px; font-weight:500; letter-spacing:1.4px; text-transform:uppercase; color:#FFFFFF; text-decoration:none; border-radius:2px;">
+              Pedir orçamento
+            </a>
+          </td>
+        </tr>
+      </table>
+      <p style="margin:14px 0 0 0; font-family:'DM Sans', Helvetica, Arial, sans-serif; font-size:13px; line-height:20px; font-weight:300; color:#8A847C;">
+        Resposta no mesmo dia útil. Sem compromisso.
+      </p>
+    </td>
+  </tr>
+
+
+  <!-- ══════════ BLOCO: SOLUÇÃO COMPLETA ══════════ -->
+  <tr>
+    <td style="padding:0;">
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#171614" style="background-color:#171614;">
+        <tr>
+          <td class="pad" style="padding:44px 40px 12px 40px;">
+            <p style="margin:0 0 12px 0; font-family:'DM Sans', Helvetica, Arial, sans-serif; font-size:11px; line-height:16px; font-weight:400; letter-spacing:2.2px; text-transform:uppercase; color:#A4774D;">
+              Uma obra, um fornecedor
+            </p>
+            <h2 class="h2" style="margin:0; font-family:'DM Sans', Helvetica, Arial, sans-serif; font-size:25px; line-height:33px; font-weight:300; letter-spacing:-0.2px; color:#E8E4DF;">
+              Tudo que é de madeira no seu projeto
+            </h2>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="pad" style="padding:26px 40px 0 40px;">
+
+            <!-- linha 1 -->
+            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr>
+                <td width="252" valign="top" style="width:252px;">
+                  <img src="imagens/sol-pisos.jpg" width="252" height="189" alt="Pisos de madeira" class="stack-img" style="display:block; width:100%; max-width:252px; height:auto; border:0;" />
+                  <p style="margin:10px 0 0 0; font-family:'DM Sans', Helvetica, Arial, sans-serif; font-size:15px; line-height:22px; font-weight:400; color:#E8E4DF;">Pisos</p>
+                  <p style="margin:2px 0 0 0; font-family:'DM Sans', Helvetica, Arial, sans-serif; font-size:13px; line-height:20px; font-weight:300; color:#8A847C;">Brasileiras, carvalhos e clássicos</p>
+                </td>
+                <td class="gap" width="16" style="width:16px; font-size:16px; line-height:16px;">&nbsp;</td>
+                <td width="252" valign="top" style="width:252px;">
+                  <img src="imagens/sol-forros.jpg" width="252" height="189" alt="Forros de madeira" class="stack-img" style="display:block; width:100%; max-width:252px; height:auto; border:0;" />
+                  <p style="margin:10px 0 0 0; font-family:'DM Sans', Helvetica, Arial, sans-serif; font-size:15px; line-height:22px; font-weight:400; color:#E8E4DF;">Forros</p>
+                  <p style="margin:2px 0 0 0; font-family:'DM Sans', Helvetica, Arial, sans-serif; font-size:13px; line-height:20px; font-weight:300; color:#8A847C;">Lineares, ripados e recortes sob medida</p>
+                </td>
+              </tr>
+            </table>
+            <div style="height:24px; line-height:24px; font-size:24px;">&nbsp;</div>
+
+            <!-- linha 2 -->
+            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr>
+                <td width="252" valign="top" style="width:252px;">
+                  <img src="imagens/sol-paineis.jpg" width="252" height="189" alt="Painéis ripados de madeira" class="stack-img" style="display:block; width:100%; max-width:252px; height:auto; border:0;" />
+                  <p style="margin:10px 0 0 0; font-family:'DM Sans', Helvetica, Arial, sans-serif; font-size:15px; line-height:22px; font-weight:400; color:#E8E4DF;">Painéis</p>
+                  <p style="margin:2px 0 0 0; font-family:'DM Sans', Helvetica, Arial, sans-serif; font-size:13px; line-height:20px; font-weight:300; color:#8A847C;">Ritmo e profundidade em marcenaria fina</p>
+                </td>
+                <td class="gap" width="16" style="width:16px; font-size:16px; line-height:16px;">&nbsp;</td>
+                <td width="252" valign="top" style="width:252px;">
+                  <img src="imagens/sol-portas.jpg" width="252" height="189" alt="Portas mimetizadas em madeira" class="stack-img" style="display:block; width:100%; max-width:252px; height:auto; border:0;" />
+                  <p style="margin:10px 0 0 0; font-family:'DM Sans', Helvetica, Arial, sans-serif; font-size:15px; line-height:22px; font-weight:400; color:#E8E4DF;">Portas</p>
+                  <p style="margin:2px 0 0 0; font-family:'DM Sans', Helvetica, Arial, sans-serif; font-size:13px; line-height:20px; font-weight:300; color:#8A847C;">Inclusive mimetizadas, que somem no painel</p>
+                </td>
+              </tr>
+            </table>
+            <div style="height:24px; line-height:24px; font-size:24px;">&nbsp;</div>
+
+            <!-- linha 3 -->
+            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr>
+                <td width="252" valign="top" style="width:252px;">
+                  <img src="imagens/sol-decks.jpg" width="252" height="189" alt="Deck de madeira em área externa" class="stack-img" style="display:block; width:100%; max-width:252px; height:auto; border:0;" />
+                  <p style="margin:10px 0 0 0; font-family:'DM Sans', Helvetica, Arial, sans-serif; font-size:15px; line-height:22px; font-weight:400; color:#E8E4DF;">Decks</p>
+                  <p style="margin:2px 0 0 0; font-family:'DM Sans', Helvetica, Arial, sans-serif; font-size:13px; line-height:20px; font-weight:300; color:#8A847C;">Nativas, Eurodeck e Kebony para área molhada</p>
+                </td>
+                <td class="gap" width="16" style="width:16px; font-size:16px; line-height:16px;">&nbsp;</td>
+                <td width="252" valign="top" style="width:252px;">
+                  <img src="imagens/sol-escadas.jpg" width="252" height="189" alt="Escada revestida em madeira" class="stack-img" style="display:block; width:100%; max-width:252px; height:auto; border:0;" />
+                  <p style="margin:10px 0 0 0; font-family:'DM Sans', Helvetica, Arial, sans-serif; font-size:15px; line-height:22px; font-weight:400; color:#E8E4DF;">Escadas</p>
+                  <p style="margin:2px 0 0 0; font-family:'DM Sans', Helvetica, Arial, sans-serif; font-size:13px; line-height:20px; font-weight:300; color:#8A847C;">Revestidas, estruturais e flutuantes</p>
+                </td>
+              </tr>
+            </table>
+
+          </td>
+        </tr>
+        <tr><td style="padding:0 0 44px 0; font-size:0; line-height:0;">&nbsp;</td></tr>
+      </table>
+    </td>
+  </tr>
+
+
+  <!-- ══════════ BLOCO: VELOCIDADE E LIMPEZA ══════════ -->
+  <tr>
+    <td style="padding:0; font-size:0; line-height:0;">
+      <img src="imagens/faixa-piso-veio.jpg" width="600" height="350" alt="Piso de madeira com veio marcante recém-instalado" style="display:block; width:100%; max-width:600px; height:auto; border:0;" />
+    </td>
+  </tr>
+
+  <tr>
+    <td class="pad" style="padding:38px 40px 0 40px;">
+      <p style="margin:0 0 12px 0; font-family:'DM Sans', Helvetica, Arial, sans-serif; font-size:11px; line-height:16px; font-weight:400; letter-spacing:2.2px; text-transform:uppercase; color:#A4774D;">
+        Obra rápida, casa limpa
+      </p>
+      <h2 class="h2" style="margin:0 0 18px 0; font-family:'DM Sans', Helvetica, Arial, sans-serif; font-size:25px; line-height:33px; font-weight:300; letter-spacing:-0.2px; color:#E8E4DF;">
+        O que os clientes mais repetem<br class="hide-mob" /> não é o material. É o prazo.
+      </h2>
+      <p style="margin:0; font-family:'DM Sans', Helvetica, Arial, sans-serif; font-size:17px; line-height:28px; font-weight:300; color:#B8B2AA;">
+        Equipes próprias e setorizadas por etapa — estrutura, piso, forro, porta — entram
+        e saem sem transformar a sua casa em canteiro por semanas. É o elogio que mais
+        aparece nas avaliações: rápido, e sem sujeira.
+      </p>
+    </td>
+  </tr>
+
+
+  <!-- ══════════ NÚMEROS ══════════ -->
+  <tr>
+    <td class="pad" style="padding:34px 40px 0 40px;">
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+          <td height="1" bgcolor="#2A2724" style="height:1px; line-height:1px; font-size:1px; background-color:#2A2724;">&nbsp;</td>
+        </tr>
+      </table>
+      <div style="height:26px; line-height:26px; font-size:26px;">&nbsp;</div>
+
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+          <td width="173" align="center" valign="top" style="width:173px;">
+            <p class="num" style="margin:0; text-align:center; font-family:'DM Sans', Helvetica, Arial, sans-serif; font-size:40px; line-height:44px; font-weight:200; letter-spacing:-1px; color:#A4774D;">1974</p>
+            <p style="margin:6px 0 0 0; text-align:center; font-family:'DM Sans', Helvetica, Arial, sans-serif; font-size:13px; line-height:19px; font-weight:300; color:#8A847C;">Meio século<br class="hide-mob" /> fazendo madeira</p>
+          </td>
+          <td class="gap" width="20" style="width:20px; font-size:20px; line-height:20px;">&nbsp;</td>
+          <td width="173" align="center" valign="top" style="width:173px;">
+            <p class="num" style="margin:0; text-align:center; font-family:'DM Sans', Helvetica, Arial, sans-serif; font-size:40px; line-height:44px; font-weight:200; letter-spacing:-1px; color:#A4774D;">4,9</p>
+            <p style="margin:6px 0 0 0; text-align:center; font-family:'DM Sans', Helvetica, Arial, sans-serif; font-size:13px; line-height:19px; font-weight:300; color:#8A847C;">Em 125 avaliações<br class="hide-mob" /> no Google</p>
+          </td>
+          <td class="gap" width="20" style="width:20px; font-size:20px; line-height:20px;">&nbsp;</td>
+          <td width="174" align="center" valign="top" style="width:174px;">
+            <p class="num" style="margin:0; text-align:center; font-family:'DM Sans', Helvetica, Arial, sans-serif; font-size:40px; line-height:44px; font-weight:200; letter-spacing:-1px; color:#A4774D;">100%</p>
+            <p style="margin:6px 0 0 0; text-align:center; font-family:'DM Sans', Helvetica, Arial, sans-serif; font-size:13px; line-height:19px; font-weight:300; color:#8A847C;">Cadeia própria,<br class="hide-mob" /> com FSC</p>
+          </td>
+        </tr>
+      </table>
+
+      <div style="height:26px; line-height:26px; font-size:26px;">&nbsp;</div>
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+          <td height="1" bgcolor="#2A2724" style="height:1px; line-height:1px; font-size:1px; background-color:#2A2724;">&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+
+  <!--
+    ══════════ DEPOIMENTO ══════════
+    ATENÇÃO — CONFERIR ANTES DE DISPARAR.
+    O texto abaixo veio do Parket.md (Obsidian). As citações daquela nota
+    NÃO são literais: foram aparadas/parafraseadas em relação ao original.
+    Antes de publicar, abrir o perfil do Google, copiar a avaliação da
+    Marina Torino palavra por palavra e colar aqui. Publicar depoimento
+    reescrito, com nome real, é passivo — e o perfil 4,9 não precisa disso.
+  -->
+  <tr>
+    <td class="pad" style="padding:36px 40px 0 40px;">
+      <p style="margin:0; font-family:'DM Sans', Helvetica, Arial, sans-serif; font-size:19px; line-height:31px; font-weight:300; color:#E8E4DF;">
+        &ldquo;Material lindo, instalação hiper rápida e sem sujeira: em 3 dias fizeram
+        os 90&nbsp;m&sup2;. É a segunda vez que faço obra com eles.&rdquo;
+      </p>
+      <p style="margin:16px 0 0 0; font-family:'DM Sans', Helvetica, Arial, sans-serif; font-size:12px; line-height:18px; font-weight:400; letter-spacing:1.2px; text-transform:uppercase; color:#8A847C;">
+        Marina Torino &nbsp;·&nbsp; avaliação no Google
+      </p>
+    </td>
+  </tr>
+
+
+  <!-- ══════════ CTA FINAL ══════════ -->
+  <tr>
+    <td class="pad" style="padding:40px 40px 0 40px;">
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#171614" style="background-color:#171614;">
+        <tr>
+          <td align="center" style="padding:36px 30px 38px 30px;">
+            <h2 class="h2" style="margin:0 0 10px 0; font-family:'DM Sans', Helvetica, Arial, sans-serif; font-size:24px; line-height:32px; font-weight:300; color:#E8E4DF;">
+              Conte o que você está fazendo
+            </h2>
+            <p style="margin:0 0 26px 0; font-family:'DM Sans', Helvetica, Arial, sans-serif; font-size:15px; line-height:24px; font-weight:300; color:#9A948C;">
+              Reforma, obra nova ou só um ambiente.<br class="hide-mob" />
+              Manda a metragem e as fotos que a gente volta com o orçamento.
+            </p>
+            <table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center" class="btn">
+              <tr>
+                <td align="center" bgcolor="#A4774D" style="background-color:#A4774D; border-radius:2px;">
+                  <a href="https://wa.me/5511999600222?text=Ol%C3%A1%21%20Vim%20pelo%20e-mail%20e%20gostaria%20de%20um%20or%C3%A7amento."
+                     style="display:inline-block; padding:16px 40px; font-family:'DM Sans', Helvetica, Arial, sans-serif; font-size:14px; line-height:18px; font-weight:500; letter-spacing:1.4px; text-transform:uppercase; color:#FFFFFF; text-decoration:none; border-radius:2px;">
+                    Falar no WhatsApp
+                  </a>
+                </td>
+              </tr>
+            </table>
+            <p style="margin:20px 0 0 0; font-family:'DM Sans', Helvetica, Arial, sans-serif; font-size:14px; line-height:21px; font-weight:300; color:#8A847C;">
+              ou ligue <a href="tel:+5511999600222" style="color:#B8B2AA; text-decoration:none; border-bottom:1px solid #3A3733;">11&nbsp;99960-0222</a>
+            </p>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+
+  <!-- ══════════ RODAPÉ ══════════ -->
+  <tr>
+    <td class="pad" align="center" style="padding:44px 40px 50px 40px;">
+      <a href="https://parket.com.br?utm_source=email&amp;utm_medium=disparo&amp;utm_campaign=orcamento&amp;utm_content=rodape" style="text-decoration:none;">
+        <img src="imagens/logo-parket-branco.png" width="92" alt="Parket" style="display:block; margin:0 auto; width:92px; max-width:92px; height:auto; border:0;" />
+      </a>
+      <div style="height:20px; line-height:20px; font-size:20px;">&nbsp;</div>
+      <p class="unstyle-auto-detected-links" style="margin:0 0 6px 0; font-family:'DM Sans', Helvetica, Arial, sans-serif; font-size:12px; line-height:20px; font-weight:300; color:#7A746C;">
+        Parket Pisos de Madeira<br />
+        Av. Magalhães de Castro, 4800 &middot; Torre 1, Cj. 201<br />
+        Cidade Jardim &middot; São Paulo/SP &middot; 05676-120
+      </p>
+      <p style="margin:14px 0 0 0; font-family:'DM Sans', Helvetica, Arial, sans-serif; font-size:12px; line-height:20px; font-weight:300; color:#7A746C;">
+        <a href="https://parket.com.br?utm_source=email&amp;utm_medium=disparo&amp;utm_campaign=orcamento" style="color:#9A948C; text-decoration:none; border-bottom:1px solid #33302C;">parket.com.br</a>
+        &nbsp;&middot;&nbsp;
+        <a href="mailto:contato@parket.com.br" style="color:#9A948C; text-decoration:none; border-bottom:1px solid #33302C;">contato@parket.com.br</a>
+      </p>
+      <div style="height:22px; line-height:22px; font-size:22px;">&nbsp;</div>
+      <!-- Descadastro: obrigatório. Troque pela tag da sua ferramenta:
+           Mailchimp *|UNSUB|* · RD Station %unsubscribe_link% · Brevo {{ unsubscribe }} -->
+      <p style="margin:0; font-family:'DM Sans', Helvetica, Arial, sans-serif; font-size:11px; line-height:18px; font-weight:300; color:#5E594F;">
+        Você recebeu este e-mail porque pediu contato ou já é cliente Parket.<br />
+        <a href="*|UNSUB|*" style="color:#7A746C; text-decoration:underline;">Descadastrar</a>
+      </p>
+    </td>
+  </tr>
+
+
+  </table>
+  <!--[if mso]></td></tr></table><![endif]-->
+
+</td>
+</tr>
+</table>
+
+</body>
+</html>
