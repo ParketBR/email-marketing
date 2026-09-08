@@ -1,2 +1,4 @@
 .DS_Store
+.parket-smtp
+enviar.py
 teste-*.eml
